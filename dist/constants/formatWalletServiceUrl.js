@@ -5,5 +5,5 @@ export default function formatProviderUrl(walletService) {
     if (Platform.OS === "android") {
         return `${deepLink}`;
     }
-    return `${universalLink}`;
+    return `${universalLink !== '' ? universalLink : deepLink+'/'}`;
 }
